@@ -33,7 +33,10 @@
             transform: translateX(-50%) rotate(calc((360deg/4) * var(--i)));
             transform-origin: bottom;
         }
-        
+        div.loader span::before {
+            content: "";
+            position: absolute;
+        }
     </style>
 </head>
 <body>
