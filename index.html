@@ -47,7 +47,24 @@
             animation: grow 1s ease-in-out infinite;
             animation-delay: calc(0.2s * var(--i));
         }
-        
+        @keyframes grow {
+            from{
+                transform: scaleY(1);
+            }
+            50% {
+                transform: scaleY(1.8);
+            }
+        }
+        @keyframes bg {
+            from {
+                filter: hue-rotate(0deg);
+                transform: rotate(0deg);
+            }
+            to {
+                filter: hue-rotate(360deg);
+                transform: rotate(-360deg);
+            }
+        }
     </style>
 </head>
 <body>
