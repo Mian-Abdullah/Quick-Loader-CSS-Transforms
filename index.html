@@ -24,8 +24,16 @@
             animation: bg 5s ease-in-out infinite;
         }
         div.loader span {
-            
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 3px;
+            height: 50%;
+            border-radius: 3px;
+            transform: translateX(-50%) rotate(calc((360deg/4) * var(--i)));
+            transform-origin: bottom;
         }
+        
     </style>
 </head>
 <body>
