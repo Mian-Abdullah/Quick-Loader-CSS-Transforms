@@ -4,86 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quick Loader</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #111;
-        }
-        .loader {
-            --loader-size: 200px;
-            --loader-lines: 40;
-
-            position: relative;
-            width: var(--loader-size);
-            height: var(--loader-size);
-            border-radius: 50%;
-            animation: bg 5s ease-in-out infinite;
-        }
-        .loader span {
-            --line-width: 3px;
-            --line-height: 25px;
-
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: var(--line-width);
-            height: calc(var(--line-height) * 0.5);
-            border-radius: 3px;
-            transform: translateX(-50%) rotate(calc((360deg / var(--loader-lines)) * var(--i)));
-            transform-origin: bottom;
-        }
-        .loader span::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: var(--line-height);
-            background: #43cc54;
-            border-radius: 4px;
-            transform: scaleY(1);
-            box-shadow: 0 -5px 10px #43cc54;
-            animation: grow 1s ease-in-out infinite;
-            animation-delay: calc(0.2s * var(--i));
-        }
-        @keyframes grow {
-            0%, 100% {
-                transform: scaleY(1);
-            }
-            50% {
-                transform: scaleY(1.8);
-            }
-        }
-        @keyframes bg {
-            from {
-                filter: hue-rotate(0deg);
-                transform: rotate(0deg);
-            }
-            to {
-                filter: hue-rotate(360deg);
-                transform: rotate(-360deg);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <div class="loader"></div>
-    <script>
-        const container = document.querySelector('.loader');
-        const numLines = parseInt(getComputedStyle(container).getPropertyValue('--loader-lines'));
-        for (let i = 0; i <= numLines; i++) {
-            let span = document.createElement('span');
-            span.style.setProperty('--i', i);
-            container.appendChild(span);
-        }
-    </script>
+    <div class="loader">
+        <!-- Dynamically add spans -->
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
