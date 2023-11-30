@@ -1,1 +1,1 @@
-# Quick-Loader-CSS-Transforms by Abdullah
+# Quick-Loader-CSS-Transforms by
