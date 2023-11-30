@@ -1,1 +1,1 @@
-# Quick-Loader-CSS-Transforms by Abdullah Jamshaid
+# Quick-Loader-CSS-Transforms by Mian Abdullah Jamshaid
