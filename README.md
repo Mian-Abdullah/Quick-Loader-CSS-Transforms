@@ -1,1 +1,1 @@
-# Quick-Loader-CSS-Transforms by
+# Quick-Loader-CSS-Transforms
